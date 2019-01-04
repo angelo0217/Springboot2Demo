@@ -9,7 +9,7 @@
     <title>Insert title here</title>
 </head>
 <body>
-helloJsp
+<div id="helloText">helloJsp</div>
 <hr>
 ${hello}
 </body>
