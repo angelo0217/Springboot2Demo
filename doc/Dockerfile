@@ -10,4 +10,4 @@ RUN mkdir /workspace \
 
 COPY demo-0.0.1-SNAPSHOT.war /workspace/basic.war
 
-ENTRYPOINT ["java","-jar","/workspace/basic.war","--docker.ip=${SERVER_IP}"]
+ENTRYPOINT ["java","-jar","/workspace/basic.war","--docker.ip=${SERVER_IP}","--spring.resources.static-locations=classpath:/static"]
