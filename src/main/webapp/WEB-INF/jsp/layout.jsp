@@ -14,14 +14,34 @@
     <!-- Bootstrap core CSS-->
     <link href="${pageContext.request.contextPath}/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <!-- MetisMenu CSS -->
-    <link href="${pageContext.request.contextPath}/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <%--<link href="${pageContext.request.contextPath}/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">--%>
     <!-- Custom fonts for this template-->
     <link href="${pageContext.request.contextPath}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
     <link href="${pageContext.request.contextPath}/css/sb-admin.css" type="text/css" rel="stylesheet">
 
-    <sitemesh:write property='head' />
+    <!-- Bootstrap core JavaScript-->
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/jquery/jquery.min.js')}"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
+    <!-- Core plugin JavaScript-->
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/jquery-easing/jquery.easing.min.js')}"></script>
+    <!-- Page level plugin JavaScript-->
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/datatables/jquery.dataTables.js')}"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/datatables/dataTables.bootstrap4.js')}"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/metisMenu/metisMenu.min.js')}"></script>
+    <!-- Custom scripts for all pages-->
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/js/sb-admin.min.js')}"></script>
+    <!-- Custom scripts for this page-->
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/js/sb-admin-datatables.min.js')}"></script>>
+    <script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/js/commonDemo.js')}"></script>>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
 
+
+    <sitemesh:write property='head' />
+    <script>
+        var pageContext = "${pageContext.request.contextPath}";
+    </script>
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -57,20 +77,6 @@
     <sitemesh:write property='body' />
     </div>
 </div>
-
+<input style="display: none" id="chkField"/>
 </body>
-<!-- Bootstrap core JavaScript-->
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/jquery/jquery.min.js')}"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
-<!-- Core plugin JavaScript-->
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/jquery-easing/jquery.easing.min.js')}"></script>
-<!-- Page level plugin JavaScript-->
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/datatables/jquery.dataTables.js')}"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/datatables/dataTables.bootstrap4.js')}"></script>
-<!-- Metis Menu Plugin JavaScript -->
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/vendor/metisMenu/metisMenu.min.js')}"></script>
-<!-- Custom scripts for all pages-->
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/js/sb-admin.min.js')}"></script>
-<!-- Custom scripts for this page-->
-<script type="text/javascript" src="${pageContext.request.contextPath}${urls.getForLookupPath('/js/sb-admin-datatables.min.js')}"></script>>
 </html>

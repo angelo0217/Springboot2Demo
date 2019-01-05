@@ -12,10 +12,11 @@ public class WelcomeController{
 
     @RequestMapping("/helloJsp")
     public String helloJsp(Map<String,Object> map){
-        System.out.println(">>>>>>>>>>>>>>>> hello");
         map.put("hello", "Hi");
-
         return "page/helloJsp";
-
+    }
+    @RequestMapping("/queryPage")
+    public String queryPage(){
+        return "page/queryPage";
     }
 }
