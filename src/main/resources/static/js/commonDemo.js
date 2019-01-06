@@ -31,7 +31,7 @@ function promiseAjax(type, url, data) {
           resolve(response.data);
         }else{
           alert(response.msg);
-          $("#chkField").val("error");
+          $("#chkField").val(response.msg);
         }
       },
       error: function (e) {
