@@ -38,6 +38,12 @@ public class MysqlConfig {
     public SqlSessionFactory mySqlSessionFactory() throws Exception {
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+
+        org.apache.ibatis.session.Configuration cfg = new org.apache.ibatis.session.Configuration();
+        cfg.setCacheEnabled(true);
+        cfg.setLazyLoadingEnabled(true);
+
+        sessionFactory.setConfiguration(cfg);
         sessionFactory.setDataSource(mysqlDataSource());
         sessionFactory.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
         return sessionFactory.getObject();
